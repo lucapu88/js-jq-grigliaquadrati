@@ -16,3 +16,6 @@
   height: 70px;
   display: flex;
 }
+.red.active {
+  background-color: red;
+}
