@@ -4,9 +4,8 @@
 // BONUS: generare la griglia dei quadratini utilizzando jQuery
 
 $(document).ready(function() {
-  $('.red').click(function(){
-    $('.quadrato').each(function(){
-      $(this).addClass('active');
-    });
+  $('.quadrato').click(function(){ // al click sul quadrato
+      $(this).addClass('active'); // viene aggiunta una classe active
   });
+  
 });

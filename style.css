@@ -16,6 +16,9 @@
   height: 70px;
   display: flex;
 }
+.quadrato.active {
+  background-color: green;
+}
 .red.active {
   background-color: red;
 }
