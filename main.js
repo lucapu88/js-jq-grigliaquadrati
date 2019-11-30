@@ -13,17 +13,17 @@ $(document).ready(function() {
       $('.quadrati-container').append('<div class="quadrato"></div>');
   };
 
-  var bombeGenerate = []; //creo un contenitore di bombe
+  var bombeGenerate = []; //creo un array contenitore di bombe
   var contatore = 0;
   while (bombeGenerate.length < 15) { //15 è il numero massimo di bombe che devono andare dentro il contenitore
-   var bombe = generaRandom(1,64); //Creo un numero causale
-   if(!bombeGenerate.includes(bombe)) { //Controllo che il numero non ci sia nell’Array
+   var bombe = generaRandom(1,64); //Creo un numero causale compreso tra 1 e 64
+   if(!bombeGenerate.includes(bombe)) { //Controllo che il numero non ci sia nell’Array (bombeGenerate)
          bombeGenerate.push(bombe); //Se non c’è lo metto nell’array (bombeGenerate)
    }
    contatore++ // per uscire dal ciclo
   };
   for (var i = 0; i < bombeGenerate.length; i++) { //creo un ciclo for per aggiungere la classe red al div quadrato
-    $('.quadrato').eq(bombeGenerate[i]).addClass('red');
+    $('.quadrato').eq(bombeGenerate[i]).addClass('red'); //la classe red viene aggiunta a tutti i 15 quadrati che sono stati inseriti casualmente in precedenza nell'array bombeGenerate
   };
 
   $('.quadrato').click(function(){ // al click sul quadrato
@@ -31,7 +31,7 @@ $(document).ready(function() {
   });
 });
 
-
+//funzione per generare numeri random
 function generaRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
